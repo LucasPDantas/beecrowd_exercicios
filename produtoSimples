@@ -1,0 +1,12 @@
+#include <stdio.h>
+ 
+int main() {
+ 
+    int valorUm, valorDois, prod;
+    scanf("%d", &valorUm);
+    scanf("%d", &valorDois);
+    prod = valorUm * valorDois;
+    printf("PROD = %d\n", prod);
+ 
+    return 0;
+}
