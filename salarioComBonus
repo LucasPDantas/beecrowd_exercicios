@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main() {
+
+    char nomeVendedor;
+    double salarioFixo, totalVendas, comissao = 0.15, total;
+
+    /*com "%c" o código não funcionou*/
+    scanf("%s", &nomeVendedor);  
+    scanf("%lf", &salarioFixo);
+    scanf("%lf", &totalVendas);
+    
+    total = ((totalVendas*comissao) + salarioFixo);
+    printf("TOTAL = R$ %.2lf\n", total);
+
+    return 0;
+}
+/*
+NOTA:
+  A diferença entre usar `%c` e `%s` está relacionada ao tipo de dado que você está esperando receber e como eles são tratados pelo programa. Aqui está a diferença entre os dois:
+
+1. `%c` é usado para ler um único caractere. Quando você usa `%c` para ler uma string (um array de caracteres), ele só lê o primeiro caractere e ignora o restante. 
+Portanto, se você usar `%c` para ler o nome do vendedor e inserir, por exemplo, "João", apenas "J" será lido e o restante será ignorado. 
+Isso pode fazer com que seu programa pareça que não está funcionando corretamente.
+
+2. `%s` é usado para ler uma string de caracteres, ou seja, uma sequência de caracteres. Quando você usa `%s`, ele lê toda a sequência de caracteres até encontrar um espaço em branco ou uma quebra de linha. 
+Portanto, usando `%s` para ler o nome do vendedor, ele irá ler toda a string "João" corretamente.
+
+Portanto, para ler uma string de caracteres, como um nome completo, você deve usar `%s`. Se você precisar ler apenas um caractere, use `%c`. 
+Certifique-se de escolher o especificador de formato correto de acordo com o tipo de dado que você está manipulando para evitar comportamentos inesperados em seu programa.
+*/
