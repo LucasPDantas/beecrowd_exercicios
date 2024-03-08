@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+
+    int codigoPecaUm, qtdPecaUm, codigoPecaDois, qtdPecaDois;
+    double valorUnitarioUm, valorUnitarioDois, totalVendas;
+
+    scanf("%d %d %lf", &codigoPecaUm, &qtdPecaUm, &valorUnitarioUm);
+    scanf("%d %d %lf", &codigoPecaDois, &qtdPecaDois, &valorUnitarioDois);
+
+    totalVendas = qtdPecaUm * valorUnitarioUm + qtdPecaDois * valorUnitarioDois;
+
+    printf("VALOR A PAGAR: R$ %.2lf\n", totalVendas);
+
+    return 0;
+}
