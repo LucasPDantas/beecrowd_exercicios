@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <cmath> //BIBLIOTECA PARA USAR 'POW' EM CALCULO DE POTENCIA
+
+int main() {
+
+    double raio, pi = 3.14159, volume;
+
+    scanf("%lf", &raio);
+    volume = (4/3.0) * pi * pow(raio,3);
+    printf("VOLUME = %.3lf\n", volume);
+
+    return 0;
+}
